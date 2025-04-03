@@ -1,0 +1,206 @@
+.header {
+  width: 100%;
+  height: 92px;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  background-color: white;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0px 24px;
+  border: 5px solid rgba(236, 236, 236, 0.18);
+  border-radius: 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+.logo span {
+  cursor: pointer;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  max-width: 900px;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin: 0 15px;
+}
+
+.navLink {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 137%;
+  color: #50545d;
+  padding: 5px;
+  /* Исправили transition, убрали изменение font-size */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navLink:hover {
+  color: #000;
+  transform: scale(1.05);
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+}
+
+.ctaButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background-color: #4758FF;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #3A47D9;
+}
+
+.arrowIcon {
+  margin-left: 8px;
+}
+
+/* Бургер-иконка (только на мобильных) */
+.burgerButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: 8px;
+}
+
+.burgerLine {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #50545d;
+  margin: 4px 0;
+  transition: background-color 0.3s ease;
+}
+
+.burgerButton:hover .burgerLine {
+  background-color: #000;
+}
+
+/* Прячем навигацию на мобильных, показываем бургер */
+@media (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
+  .cta{
+    display: none;
+  }
+  .burgerButton {
+    display: inline-block;
+  }
+}
+
+/* Мобильное меню (выезжающее сбоку) */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;            /* или 100%, если хотите меню на весь экран */
+  max-width: 300px;      /* ограничиваем ширину меню */
+  height: 100vh;
+  background-color: #4758FF;
+  color: #fff;
+  transform: translateX(100%); /* По умолчанию за экраном */
+  transition: transform 0.3s ease;
+  z-index: 999;          /* Поверх всего */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+
+/* Когда меню открыто */
+.open {
+  transform: translateX(0);
+}
+
+/* Обёртка для контента, чтобы клик за пределами закрывал меню */
+.mobileMenuContent {
+  width: 100%;
+  padding: 24px;
+  position: relative;
+}
+
+/* Кнопка закрытия (X) */
+.closeButton {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 24px;
+}
+
+.mobileNavList {
+  list-style: none;
+  margin-top: 60px; /* отступ, чтобы не залезало под кнопку закрытия */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobileNavLink {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mobileNavLink:hover {
+  color: #dcdcdc;
+}
+
+.mobileCtaButton {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 24px;
+  padding: 12px 24px;
+  background-color: #fff;
+  color: #4758FF;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.mobileCtaButton:hover {
+  background-color: #eaeaea;
+}

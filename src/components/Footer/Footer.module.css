@@ -1,0 +1,124 @@
+/* components/Footer/Footer.module.css */
+.footer {
+    background-color: #4758FF;
+    color: white;
+    padding: 60px 0;
+    width: 100%;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footerContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .footerColumn {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .logo {
+    margin-bottom: 20px;
+  }
+  
+  .logoText {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .legalLinks {
+    margin-bottom: 20px;
+  }
+  
+  .legalLink {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .legalLink:hover {
+    color: white;
+  }
+  
+  .copyright {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+  }
+  
+  .columnTitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .navList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navItem {
+    margin-bottom: 15px;
+  }
+  
+  .navLink {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .navLink:hover {
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .footerContent {
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    .footerColumn {
+      width: 100%;
+    }
+    
+    .footer {
+      padding: 40px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      margin-bottom: 15px;
+    }
+    
+    .logoText {
+      font-size: 24px;
+    }
+    
+    .columnTitle {
+      font-size: 16px;
+    }
+    
+    .legalLink, .navLink {
+      font-size: 14px;
+    }
+    
+    .copyright {
+      font-size: 12px;
+    }
+  }
