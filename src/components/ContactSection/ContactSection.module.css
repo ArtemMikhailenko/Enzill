@@ -1,4 +1,3 @@
-/* components/ContactSection/ContactSection.module.css */
 .contactSection {
     padding: 80px 0;
     width: 100%;
@@ -6,9 +5,10 @@
   
   .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1240px;
     margin: 0 auto;
     padding: 0 20px;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
@@ -16,13 +16,19 @@
   
   .content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
     min-width: 320px;
+    gap: 20px; 
   }
   
   .title {
+    font-weight: 600;
     font-size: 40px;
-    font-weight: 800;
-    line-height: 1.2;
+    line-height: 125%;
+    letter-spacing: 0.01em;
     margin-bottom: 24px;
     color: #000;
   }
@@ -76,7 +82,7 @@
   }
   
   .formCard {
-    background-color: #4758FF;
+    background-color: #474ed6;
     border-radius: 12px;
     padding: 40px;
     color: white;

@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import Slider from 'react-slick';
 import styles from './WhyChooseUs.module.css';
+import ReactCountryFlag from 'react-country-flag';
 
 // Import для Slider
 import 'slick-carousel/slick/slick.css';
@@ -53,14 +54,17 @@ interface CountryBadgeProps {
 const CountryBadge: React.FC<CountryBadgeProps> = ({ name, flagCode }) => {
   return (
     <div className={styles.countryBadge}>
-      <span className={styles.flag}>
-        {/* Использование эмодзи флагов через Unicode */}
-        {flagCode}
-      </span>
+      <ReactCountryFlag 
+        countryCode={flagCode} 
+        svg
+        style={{ width: '2em', height: '2em', borderRadius:'50%'}}
+        title={name}
+      />
       <span className={styles.countryName}>{name}</span>
     </div>
   );
 };
+
 
 const WhyChooseUs: React.FC = () => {
   const sliderRef = useRef<Slider>(null);
@@ -115,30 +119,48 @@ const WhyChooseUs: React.FC = () => {
       step: 3,
       title: "Apply for a free-of-charge media outreach.",
       description: "Begin by submitting your application for a complimentary media outreach service.",
-      hasBorder: true
     },
     {
       step: 4,
+      title: "Apply for a free-of-charge media outreach.",
+      description: "Begin by submitting your application for a complimentary media outreach service."
+    },
+    {
+      step: 5,
       title: "Apply for a free-of-charge media outreach.",
       description: "Begin by submitting your application for a complimentary media outreach service."
     }
   ];
 
   const countries = [
-    { name: "USA", flagCode: "🇺🇸" },
-    { name: "Germany", flagCode: "🇩🇪" },
-    { name: "UK", flagCode: "🇬🇧" },
-    { name: "Poland", flagCode: "🇵🇱" },
-    { name: "Italy", flagCode: "🇮🇹" },
-    { name: "Spain", flagCode: "🇪🇸" },
-    { name: "France", flagCode: "🇫🇷" },
-    { name: "Brazil", flagCode: "🇧🇷" },
-    { name: "Austria", flagCode: "🇦🇹" },
-    { name: "Philippines", flagCode: "🇵🇭" },
-    { name: "Canada", flagCode: "🇨🇦" },
-    { name: "Portugal", flagCode: "🇵🇹" },
-    { name: "Netherlands", flagCode: "🇳🇱" }
+    { name: "USA", flagCode: "US" },
+    { name: "Germany", flagCode: "DE" },
+    { name: "Poland", flagCode: "PL" },
+    { name: "Italy", flagCode: "IT" },
+    { name: "Spain", flagCode: "ES" },
+    { name: "France", flagCode: "FR" },
+    { name: "Brazil", flagCode: "BR" },
+    { name: "Austria", flagCode: "AT" },
+    { name: "Philippines", flagCode: "PH" },
+    { name: "Canada", flagCode: "CA" },
+    { name: "Portugal", flagCode: "PT" },
+    { name: "Netherlands", flagCode: "NL" },
+    { name: "China", flagCode: "CN" },
+    { name: "Japan", flagCode: "JP" },
+    { name: "Australia", flagCode: "AU" },
+    { name: "India", flagCode: "IN" },
+    { name: "Mexico", flagCode: "MX" },
+    { name: "Sweden", flagCode: "SE" },
+    { name: "Norway", flagCode: "NO" },
+    { name: "Denmark", flagCode: "DK" },
+    { name: "Finland", flagCode: "FI" },
+    { name: "Switzerland", flagCode: "CH" },
+    { name: "Belgium", flagCode: "BE" },
+    { name: "Ireland", flagCode: "IE" },
+    { name: "Israel", flagCode: "IL" },
+    { name: "Turkey", flagCode: "TR" }
   ];
+  
 
   return (
     <section className={styles.whyChooseUs}>
@@ -158,7 +180,6 @@ const WhyChooseUs: React.FC = () => {
                   step={step.step}
                   title={step.title}
                   description={step.description}
-                  hasBorder={step.hasBorder}
                 />
               </div>
             ))}
@@ -196,15 +217,15 @@ const WhyChooseUs: React.FC = () => {
 
       </div>
       <div className={styles.countriesCarousel}>
-            <div className={styles.countriesTrack}>
-            {countries.concat(countries).map((country, index) => (
-                <CountryBadge 
-                key={index} 
-                name={country.name} 
-                flagCode={country.flagCode} 
-                />
-            ))}
-            </div>
+      <div className={styles.countriesTrack}>
+    {countries.concat(countries).map((country, index) => (
+      <CountryBadge 
+        key={index} 
+        name={country.name} 
+        flagCode={country.flagCode} 
+      />
+    ))}
+  </div>
         </div>
     </section>
   );

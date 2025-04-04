@@ -1,14 +1,14 @@
 /* components/WhyChooseUs/WhyChooseUs.module.css */
 .whyChooseUs {
     padding: 80px 0;
-    background-color: #4758FF;
+    background-color: #474ed6;
     color: white;
     width: 100%;
   }
   
   .container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1240px;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -71,8 +71,8 @@
   }
   
   .stepDot {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     background-color: #E0E0E0;
   }
@@ -83,7 +83,7 @@
   
   .stepTitle {
     font-weight: 500;
-    font-size: 30px;
+    font-size: 26px;
     line-height: 140%;
     margin-bottom: 16px;
     color: #000;
@@ -91,7 +91,7 @@
   
   .stepDescription {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 161%;
     color: #353535;
 
@@ -144,10 +144,7 @@
     color: white;
   }
   
-  .highlight {
-    font-weight: 800;
-    font-size: 36px;
-  }
+ 
   
   .countriesContainer {
     display: flex;
@@ -160,14 +157,16 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    background-color: white;
-    border-radius: 100px;
-    padding: 8px 16px;
+    background-color: #fff;
+    border: 2px solid #E0E0E0;
+    border-radius: 40px; 
+    padding: 2px 5px;
     color: #333;
     font-weight: 400;
-    font-size: 17px;
-    line-height: 120%;
-    transition: transform 0.3s ease;
+    font-size: 16px;
+    line-height: 1.4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
   }
   
   .countryBadge:hover {
@@ -175,23 +174,23 @@
   }
   
   .flag {
-    font-size: 18px;
+    border-radius: 50%;
   }
   .countriesCarousel {
     overflow: hidden;
     position: relative;
-    /* При необходимости можно задать высоту или паддинги */
   }
   
   .countriesTrack {
     display: flex;
-    /* Выравнивание по центру по вертикали */
     align-items: center;
     gap: 10px;
-    /* Анимация для плавного скролла */
     animation: scroll 20s linear infinite;
   }
-  
+  .highlight {
+    font-weight: 900;
+    font-size: 36px;
+  }
   /* Ключевые кадры для анимации */
   @keyframes scroll {
     0% {

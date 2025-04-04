@@ -17,12 +17,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
+
     gap: 40px;
   }
   
   .footerColumn {
-    flex: 1;
+    /* flex: 1; */
     min-width: 250px;
+    align-items: flex-start;
+
   }
   
   .logo {
@@ -85,7 +89,15 @@
   .navLink:hover {
     color: white;
   }
-  
+  .footerColumn{
+    justify-items: center;
+  }
+  .footerColumn:first-child{
+    justify-items: baseline;
+  }
+  .footerColumn:last-child {
+    justify-items: end;
+  }
   @media (max-width: 768px) {
     .footerContent {
       flex-direction: column;

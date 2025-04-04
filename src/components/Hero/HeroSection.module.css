@@ -6,7 +6,7 @@
   
   .container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -23,7 +23,7 @@
   
   .title {
     font-weight: 500;
-    font-size: 70px;
+    font-size: 60px;
     line-height: 118%;
     letter-spacing: -0.01em;
     text-transform: capitalize;
@@ -33,7 +33,7 @@
   
   .description {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 124%;
     color: #333;
     margin-bottom: 32px;
@@ -49,15 +49,15 @@
     justify-content: center;
     border: 2px solid #374cd1;
     border-radius: 14px;
-    padding: 12px 24px;
+    padding: 8px 24px;
     background-color: #374cd1;
     color: white;
     text-decoration: none;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 18px;
     text-align: center;
-    width: 334px;
-    height: 66px;
+    width: 314px;
+    height: 56px;
     transition: background-color 0.3s ease;
   }
   
@@ -85,7 +85,7 @@
   }
   
   .ratingText {
-    font-size: 16px;
+    font-size: 14px;
     color: #333;
   }
   
@@ -102,7 +102,7 @@
   
   .featureItem p {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 128%;
     color: #000;
   }
@@ -110,13 +110,13 @@
   .imageContainer {
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: flex-start;
   }
   
   .imageWrapper {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     position: relative;
   }
   
