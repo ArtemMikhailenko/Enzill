@@ -1,8 +1,4 @@
-/* CountriesCarousel.module.css */
-:root {
-    --light-gray: #9ca6a2;
-  }
-  
+
   .countriesCarousel {
     overflow: hidden;
     position: relative;

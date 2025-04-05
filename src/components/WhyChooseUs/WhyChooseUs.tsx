@@ -79,7 +79,13 @@ const WhyChooseUs: React.FC = () => {
     arrows: false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1124,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
         }
@@ -87,11 +93,14 @@ const WhyChooseUs: React.FC = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1.03,
+          centerMode: true,
+          centerPadding: '10px' // значение можно скорректировать для желаемой видимости
         }
       }
     ]
   };
+  
 
   const goToPrev = () => {
     if (sliderRef.current) {

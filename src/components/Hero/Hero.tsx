@@ -71,6 +71,17 @@ const HeroSection: React.FC = () => {
               className={styles.heroImage}
             />
           </div>
+          <div className={styles.featuresMob}>
+            <div className={styles.featureItem}>
+              <p>Reclaim lost traffic</p>
+            </div>
+            <div className={styles.featureItem}>
+              <p>Increase organic reach</p>
+            </div>
+            <div className={styles.featureItem}>
+              <p>Drive more conversions</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

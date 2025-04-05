@@ -1,6 +1,5 @@
 .pricingSection {
   padding: 80px 0;
-  background-color: #f8f9fa;
   width: 100%;
 }
 
@@ -42,7 +41,7 @@
   flex: 1;
   min-height: 600px;
   color: #000;
-  background-color: #ffffff;
+  background-color: #f9fafe;
   border-radius: 21px;
   padding: 32px;
   border: 3px solid #ececec;

@@ -148,7 +148,9 @@
     .whyChooseUs {
       padding: 60px 0;
     }
-    
+    .sliderContainer{
+      padding: 0;
+    }
     .title {
       font-size: 30px;
     }
@@ -179,6 +181,7 @@
     .stepCard {
       padding: 24px;
     }
+    
     
     .sliderButton {
       width: 36px;
