@@ -7,6 +7,7 @@ import ReactCountryFlag from 'react-country-flag';
 // Import для Slider
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import CountriesCarousel from '../CountriesCarousel/CountriesCarousel';
 
 interface StepCardProps {
   step: number;
@@ -191,8 +192,8 @@ const WhyChooseUs: React.FC = () => {
               className={`${styles.sliderButton} ${styles.prevButton}`}
               aria-label="Previous slide"
             >
-              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.7388 8.00027H1.26514M1.26514 8.00027L8.00198 14.7371M1.26514 8.00027L8.00198 1.26343" stroke="white" stroke-width="1.68421" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </button>
             <button 
@@ -200,8 +201,8 @@ const WhyChooseUs: React.FC = () => {
               className={`${styles.sliderButton} ${styles.nextButton}`}
               aria-label="Next slide"
             >
-              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.26074 8.00027H14.7345M14.7345 8.00027L7.99758 14.7371M14.7345 8.00027L7.99758 1.26343" stroke="white" stroke-width="1.68421" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </button>
           </div>
@@ -216,17 +217,7 @@ const WhyChooseUs: React.FC = () => {
         </div>
 
       </div>
-      <div className={styles.countriesCarousel}>
-      <div className={styles.countriesTrack}>
-    {countries.concat(countries).map((country, index) => (
-      <CountryBadge 
-        key={index} 
-        name={country.name} 
-        flagCode={country.flagCode} 
-      />
-    ))}
-  </div>
-        </div>
+            <CountriesCarousel/>
     </section>
   );
 };

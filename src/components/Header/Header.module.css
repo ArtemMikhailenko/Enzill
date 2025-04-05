@@ -62,6 +62,7 @@
 .navLink:hover {
   color: #000;
   transform: scale(1.05);
+  font-weight: 700;
 }
 
 .cta {
@@ -86,7 +87,7 @@
 }
 
 .ctaButton:hover {
-  background-color: #3A47D9;
+  background-color: #1824a4;
 }
 
 .arrowIcon {
