@@ -177,7 +177,15 @@
     .slider {
       margin: 0;
     }
-    
+    .trackTitle{
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .highlight{
+      font-size: 20px;
+      font-weight: 800;
+    }
     .stepCard {
       padding: 24px;
     }

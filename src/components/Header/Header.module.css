@@ -102,17 +102,21 @@
   cursor: pointer;
   padding: 8px;
   margin-left: 8px;
+  rotate: 180deg;
 }
 
 .burgerLine {
   display: block;
-  width: 24px;
+  width: 34px;
   height: 2px;
-  background-color: #50545d;
-  margin: 4px 0;
+  background-color: #375fd1;
+  margin: 6px 0;
+  
   transition: background-color 0.3s ease;
 }
-
+.burgerLine:nth-child(2) {
+  width: 30px;
+}
 .burgerButton:hover .burgerLine {
   background-color: #000;
 }
