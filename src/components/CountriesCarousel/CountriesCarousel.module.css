@@ -9,7 +9,7 @@
   .innerCarousel {
     display: flex;
     width: fit-content;
-    animation: scroll 45s linear infinite;
+    animation: scroll 85s linear infinite;
   }
   
   .paused {
