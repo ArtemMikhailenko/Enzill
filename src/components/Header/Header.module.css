@@ -30,6 +30,7 @@
 
 .headerScrolled .container {
   height: 58px; /* Smaller height when scrolled */
+  backdrop-filter: blur(15px);
   background-color: rgba(255, 255, 255, 0.6); /* More transparent background */
   border: 2px solid rgba(236, 236, 236, 0.1); /* Thinner, more transparent border when scrolled */
   border-radius: 12px; /* Smaller border radius when scrolled */
@@ -97,7 +98,7 @@
 
 .headerScrolled .navLink {
   font-size: 14px; /* Smaller text when scrolled */
-  color: #374cd1; /* Change color when scrolled */
+
 }
 
 /* Underline effect for nav links */
