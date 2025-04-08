@@ -1,11 +1,33 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './Header.module.css';
 
 const Header: React.FC = () => {
-  // Управляем состоянием бургер-меню
+  // State for burger menu
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // New state for scroll effect
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      // Apply scrolled class when page is scrolled more than 50px
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const handleBurgerClick = () => {
     setIsMobileMenuOpen(true);
@@ -16,16 +38,16 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isScrolled ? styles.headerScrolled : ''}`}>
       <div className={styles.container}>
-        {/* Логотип */}
+        {/* Logo */}
         <div className={styles.logo}>
           <Link href="/">
             <span>Enzill</span>
           </Link>
         </div>
 
-        {/* Навигация для десктопа */}
+        {/* Desktop Navigation */}
         <nav className={styles.navigation}>
           <ul className={styles.navList}>
             <li className={styles.navItem}>
@@ -51,7 +73,7 @@ const Header: React.FC = () => {
           </ul>
         </nav>
 
-        {/* Кнопка "Book a Call" (CTA) */}
+        {/* "Book a Call" button (CTA) */}
         <div className={styles.cta}>
           <Link href="/book-call" className={styles.ctaButton}>
             Book a Call
@@ -68,26 +90,25 @@ const Header: React.FC = () => {
           </Link>
         </div>
 
-        {/* Бургер-иконка (только на мобильных) */}
+        {/* Burger icon (mobile only) */}
         <button 
           className={styles.burgerButton} 
           onClick={handleBurgerClick}
           aria-label="Open menu"
         >
-          {/* Простой "гамбургер" из 3-х полосок */}
           <span className={styles.burgerLine}></span>
           <span className={styles.burgerLine}></span>
           <span className={styles.burgerLine}></span>
         </button>
       </div>
 
-      {/* Мобильное меню, выезжающее сбоку */}
+      {/* Mobile menu slide-in */}
       <div 
         className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.open : ''}`}
         onClick={handleCloseMenu}
       >
         <div className={styles.mobileMenuContent} onClick={(e) => e.stopPropagation()}>
-          {/* Кнопка закрытия меню */}
+          {/* Close button */}
           <button 
             className={styles.closeButton} 
             onClick={handleCloseMenu}

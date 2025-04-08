@@ -1,23 +1,40 @@
 .header {
   width: 100%;
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
+  position: fixed; /* Make header fixed */
+  top: 0;
+  left: 0;
+  z-index: 100; /* Ensure it's above other content */
+  padding: 10px 24px;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Improved smooth transition with custom easing */
+  background-color: transparent; /* Start with transparent background */
+}
+
+.headerScrolled {
+  /* background-color: rgba(255, 255, 255, 0.65); Semi-transparent when scrolled */
 }
 
 .container {
   width: 100%;
-  
   height: 72px;
   background-color: white;
-  max-width: 1200px;
+  max-width: 1160px;
   margin: 0 auto;
-  padding: 0px 24px;
+  padding: 0px 20px;
   border: 5px solid rgba(236, 236, 236, 0.18);
   border-radius: 19px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Match header transition */
+}
+
+.headerScrolled .container {
+  height: 58px; /* Smaller height when scrolled */
+  background-color: rgba(255, 255, 255, 0.6); /* More transparent background */
+  border: 2px solid rgba(236, 236, 236, 0.1); /* Thinner, more transparent border when scrolled */
+  border-radius: 12px; /* Smaller border radius when scrolled */
+  transform: translateY(2px) scale(1); /* Subtle scale and position shift effect */
+  box-shadow: 0 4px 20px rgba(55, 76, 209, 0.08); /* Inner container shadow */
 }
 
 .logo {
@@ -26,6 +43,13 @@
   line-height: 92%;
   letter-spacing: 0.01em;
   color: #000;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.headerScrolled .logo {
+  font-size: 21px; /* Smaller logo when scrolled */
+  letter-spacing: 0.03em; /* Slight letter spacing change */
+  transform: translateX(-3px); /* Subtle shift left */
 }
 
 .logo span {
@@ -45,10 +69,20 @@
   justify-content: space-between;
   margin: 0;
   padding: 0;
+  transition: all 0.5s ease;
+}
+
+.headerScrolled .navList {
+  transform: translateX(-5px); /* Slight shift when scrolled */
 }
 
 .navItem {
   margin: 0 15px;
+  transition: all 0.3s ease;
+}
+
+.headerScrolled .navItem {
+  margin: 0 12px; /* Tighter spacing when scrolled */
 }
 
 .navLink {
@@ -57,14 +91,42 @@
   line-height: 137%;
   color: #50545d;
   padding: 5px;
-  /* Исправили transition, убрали изменение font-size */
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.headerScrolled .navLink {
+  font-size: 14px; /* Smaller text when scrolled */
+  color: #374cd1; /* Change color when scrolled */
+}
+
+/* Underline effect for nav links */
+.navLink:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #374cd1;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.navLink:hover:after {
+  width: 100%;
+  opacity: 1;
+}
+
+.headerScrolled .navLink:after {
+  height: 1px; /* Thinner underline when scrolled */
 }
 
 .navLink:hover {
   color: #000;
-  transform: scale(1.05);
-  font-weight: 700;
+  transform: translateY(-2px); /* Slight lift on hover */
+  font-weight: 500;
 }
 
 .cta {
@@ -81,22 +143,60 @@
   padding: 8px 20px;
   width: 200px;
   color: white;
-  border-radius: 5px;
   background: #374cd1;
   text-decoration: none;
   font-weight: 500;
-  transition: background-color 0.3s ease;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  overflow: hidden;
+  position: relative;
+}
+
+.headerScrolled .ctaButton {
+  padding: 6px 16px; /* Smaller padding when scrolled */
+  width: 170px; /* Smaller width when scrolled */
+  border-radius: 8px; /* Smaller border radius when scrolled */
+  transform: translateX(5px); /* Shift right when scrolled */
+}
+
+/* Shine effect for CTA button */
+.ctaButton:before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.ctaButton:hover:before {
+  opacity: 1;
+  left: 100%;
 }
 
 .ctaButton:hover {
   background-color: #1824a4;
+  transform: translateY(-3px); /* Enhanced lift effect on hover */
+  box-shadow: 0 6px 15px rgba(55, 76, 209, 0.4); /* Enhanced shadow on hover */
+}
+
+.headerScrolled .ctaButton:hover {
+  transform: translateY(-2px) translateX(5px); /* Combined transform when scrolled and hovered */
 }
 
 .arrowIcon {
   margin-left: 8px;
+  transition: all 0.3s ease;
 }
 
-/* Бургер-иконка (только на мобильных) */
+.ctaButton:hover .arrowIcon {
+  transform: translateX(3px); /* Arrow moves right on hover */
+}
+
+/* Burger icon (mobile only) */
 .burgerButton {
   display: none;
   background: none;
@@ -105,6 +205,11 @@
   padding: 8px;
   margin-left: 8px;
   rotate: 180deg;
+  transition: all 0.3s ease;
+}
+
+.headerScrolled .burgerButton {
+  transform: scale(0.9); /* Slightly smaller when scrolled */
 }
 
 .burgerLine {
@@ -113,25 +218,43 @@
   height: 2px;
   background-color: #375fd1;
   margin: 6px 0;
-  
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
+
+.headerScrolled .burgerLine {
+  width: 30px; /* Smaller lines when scrolled */
+  margin: 5px 0; /* Tighter spacing when scrolled */
+}
+
 .burgerLine:nth-child(2) {
   width: 30px;
 }
+
+.headerScrolled .burgerLine:nth-child(2) {
+  width: 25px; /* Middle line even smaller when scrolled */
+}
+
 .burgerButton:hover .burgerLine {
   background-color: #000;
 }
 
-/* Прячем навигацию на мобильных, показываем бургер */
+.burgerButton:hover .burgerLine:nth-child(1) {
+  transform: translateY(1px);
+}
+
+.burgerButton:hover .burgerLine:nth-child(3) {
+  transform: translateY(-1px);
+}
+
+/* Hide navigation on mobile, show burger */
 @media (max-width: 768px) {
-  .container{
+  .container {
     margin: 0 10px;
   }
   .navigation {
     display: none;
   }
-  .cta{
+  .cta {
     display: none;
   }
   .burgerButton {
@@ -139,38 +262,39 @@
   }
 }
 
-/* Мобильное меню (выезжающее сбоку) */
+/* Mobile menu (side slide-in) */
 .mobileMenu {
   position: fixed;
   top: 0;
   right: 0;
-  width: 80%;            /* или 100%, если хотите меню на весь экран */
-  max-width: 300px;      /* ограничиваем ширину меню */
+  width: 80%;
+  max-width: 300px;
   height: 100vh;
   background-color: #4758FF;
   color: #fff;
-  transform: translateX(100%); /* По умолчанию за экраном */
-  transition: transform 0.3s ease;
-  z-index: 999;          /* Поверх всего */
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 999;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   padding-top: 20px;
+  box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Когда меню открыто */
+/* When menu is open */
 .open {
   transform: translateX(0);
 }
 
-/* Обёртка для контента, чтобы клик за пределами закрывал меню */
+/* Content wrapper to close menu when clicking outside */
 .mobileMenuContent {
   width: 100%;
   padding: 24px;
   position: relative;
 }
 
-/* Кнопка закрытия (X) */
+/* Close button (X) */
 .closeButton {
   background: none;
   border: none;
@@ -180,11 +304,16 @@
   position: absolute;
   top: 20px;
   right: 24px;
+  transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+  transform: rotate(90deg);
 }
 
 .mobileNavList {
   list-style: none;
-  margin-top: 60px; /* отступ, чтобы не залезало под кнопку закрытия */
+  margin-top: 60px;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -196,11 +325,30 @@
   font-weight: 400;
   color: #fff;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  padding: 5px 0;
+}
+
+.mobileNavLink:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.mobileNavLink:hover:before {
+  width: 100%;
 }
 
 .mobileNavLink:hover {
   color: #dcdcdc;
+  transform: translateX(5px);
 }
 
 .mobileCtaButton {
@@ -213,9 +361,35 @@
   border-radius: 5px;
   text-decoration: none;
   font-weight: 500;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mobileCtaButton:before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.mobileCtaButton:hover:before {
+  opacity: 1;
+  left: 100%;
 }
 
 .mobileCtaButton:hover {
   background-color: #eaeaea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobileCtaButton:hover .arrowIcon {
+  transform: translateX(3px);
 }
