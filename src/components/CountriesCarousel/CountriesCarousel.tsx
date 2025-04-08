@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './CountriesCarousel.module.css';
 
 const CountriesCarousel = () => {
@@ -33,44 +33,24 @@ const CountriesCarousel = () => {
     { name: "Turkey", flagCode: "TR" }
   ];
 
-  const containerRef = useRef(null);
-  // Дублируем массив для гарантии бесшовности
+  // Create a ref for the track to measure its width
+  const trackRef = useRef(null);
+  
+  // We need to duplicate countries for a seamless infinite loop
   const duplicatedCountries = [...countries, ...countries];
 
   return (
-    <div 
-      ref={containerRef} 
-      className={styles.countriesCarousel}
-    >
-      <div className={`${styles.innerCarousel} `}>
-        <div className={styles.countriesTrack}>
+    <div className={styles.countriesCarousel}>
+      <div className={styles.innerCarousel}>
+        <div ref={trackRef} className={styles.countriesTrack}>
           {duplicatedCountries.map((country, index) => (
             <div key={index} className={styles.countryBadge}>
               <span className={styles.flagContainer}>
-                <img 
+                <img
                   src={`https://flagcdn.com/w20/${country.flagCode.toLowerCase()}.png`}
                   srcSet={`https://flagcdn.com/w40/${country.flagCode.toLowerCase()}.png 2x`}
-                  width="30" 
+                  width="30"
                   height="30"
-                  alt={country.name}
-                  className={styles.flagImage}
-                />
-              </span>
-              <span className={styles.countryName}>{country.name}</span>
-            </div>
-          ))}
-        </div>
-        
-        {/* Дублируем содержимое для создания непрерывного потока */}
-        <div className={styles.countriesTrack}>
-          {duplicatedCountries.map((country, index) => (
-            <div key={index} className={styles.countryBadge}>
-              <span className={styles.flagContainer}>
-                <img 
-                  src={`https://flagcdn.com/w20/${country.flagCode.toLowerCase()}.png`}
-                  srcSet={`https://flagcdn.com/w40/${country.flagCode.toLowerCase()}.png 2x`}
-                  width="20" 
-                  height="20"
                   alt={country.name}
                   className={styles.flagImage}
                 />
