@@ -149,19 +149,11 @@ const ContactSection: React.FC = () => {
               <p>We research your competition</p>
             </div>
           </div>
-          
-          <div className={styles.cta}>
-            <h3 className={styles.ctaText}>Let's create your SEO link-building strategy together!</h3>
-          </div>
         </div>
         
         <div className={styles.formContainer}>
           <div className={styles.formCard}>
-            <h3 className={styles.formTitle}>BOOK A CALL WITH US</h3>
-            <p className={styles.formSubtitle}>
-              (Please wait 5 seconds for the calendar to load after clicking the button)
-            </p>
-            
+            <h3 className={styles.formTitle}>BOOK A CALL WITH US</h3>    
             <form onSubmit={handleSubmit} className={styles.form}>
               <div className={styles.formGroup}>
                 <input

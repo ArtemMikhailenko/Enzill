@@ -34,8 +34,6 @@ const CountriesCarousel = () => {
   ];
 
   const containerRef = useRef(null);
-  const [isPaused, setIsPaused] = useState(false);
-
   // Дублируем массив для гарантии бесшовности
   const duplicatedCountries = [...countries, ...countries];
 
@@ -43,10 +41,8 @@ const CountriesCarousel = () => {
     <div 
       ref={containerRef} 
       className={styles.countriesCarousel}
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
     >
-      <div className={`${styles.innerCarousel} ${isPaused ? styles.paused : ''}`}>
+      <div className={`${styles.innerCarousel} `}>
         <div className={styles.countriesTrack}>
           {duplicatedCountries.map((country, index) => (
             <div key={index} className={styles.countryBadge}>

@@ -117,68 +117,39 @@ const WhyChooseUs: React.FC = () => {
   const steps = [
     {
       step: 1,
-      title: "Apply for a free-of-charge media outreach.",
-      description: "Begin by submitting your application for a complimentary media outreach service."
+      title: "Search Engine Visibility",
+      description: "Each backlink serves as a recommendation, boosting your SERP rankings."
     },
     {
       step: 2,
-      title: "Apply for a free-of-charge media outreach.",
-      description: "Begin by submitting your application for a complimentary media outreach service."
+      title: "Boosts Website Traffic",
+      description: "Attract engaged visitors from reputable sites."
     },
     {
       step: 3,
-      title: "Apply for a free-of-charge media outreach.",
-      description: "Begin by submitting your application for a complimentary media outreach service.",
+      title: "Establishes Brand Authority",
+      description: "Backlinks from respected sites build audience trust.",
     },
     {
       step: 4,
-      title: "Apply for a free-of-charge media outreach.",
-      description: "Begin by submitting your application for a complimentary media outreach service."
+      title: "Support Content Marketing",
+      description: "Quality content gets naturally linked and shared."
     },
     {
       step: 5,
-      title: "Apply for a free-of-charge media outreach.",
-      description: "Begin by submitting your application for a complimentary media outreach service."
+      title: "Long-Term SEO",
+      description: "Consistent link-building efforts yield ongoing traffic."
     }
   ];
 
-  const countries = [
-    { name: "USA", flagCode: "US" },
-    { name: "Germany", flagCode: "DE" },
-    { name: "Poland", flagCode: "PL" },
-    { name: "Italy", flagCode: "IT" },
-    { name: "Spain", flagCode: "ES" },
-    { name: "France", flagCode: "FR" },
-    { name: "Brazil", flagCode: "BR" },
-    { name: "Austria", flagCode: "AT" },
-    { name: "Philippines", flagCode: "PH" },
-    { name: "Canada", flagCode: "CA" },
-    { name: "Portugal", flagCode: "PT" },
-    { name: "Netherlands", flagCode: "NL" },
-    { name: "China", flagCode: "CN" },
-    { name: "Japan", flagCode: "JP" },
-    { name: "Australia", flagCode: "AU" },
-    { name: "India", flagCode: "IN" },
-    { name: "Mexico", flagCode: "MX" },
-    { name: "Sweden", flagCode: "SE" },
-    { name: "Norway", flagCode: "NO" },
-    { name: "Denmark", flagCode: "DK" },
-    { name: "Finland", flagCode: "FI" },
-    { name: "Switzerland", flagCode: "CH" },
-    { name: "Belgium", flagCode: "BE" },
-    { name: "Ireland", flagCode: "IE" },
-    { name: "Israel", flagCode: "IL" },
-    { name: "Turkey", flagCode: "TR" }
-  ];
-  
 
   return (
     <section className={styles.whyChooseUs}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>Why choose us?</h2>
+          <h2 className={styles.title}>The Link-Building Agency That Gets Results</h2>
           <p className={styles.subtitle}>
-            Our company offers guaranteed publicity and free-of-charge media outreaches!
+          Our data-driven approach ensures high-quality backlinks from reputable sources, which boosts search engine rankings and establishes credibility in your industry.
           </p>
         </div>
         

@@ -8,20 +8,23 @@
   
   .container {
     width: 100%;
-    max-width: 1240px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
   }
   
   .header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
   
   .title {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 16px;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-bottom: 30px;
     color: white;
   }
   
@@ -50,14 +53,14 @@
   
   .stepCard {
     background-color: white;
-    border-radius: 12px;
-    padding: 35px;
+    border-radius: 16px;
+    padding: 25px;
     height: 100%;
-    min-height: 240px;
+    max-width: 285px;
+    min-height: 326px;    
     display: flex;
-    max-width:354px;
     flex-direction: column;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 5px solid rgba(255, 255, 255, 0.1);
   }
   
   .borderedCard {
@@ -71,8 +74,8 @@
   }
   
   .stepDot {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color: #E0E0E0;
   }
@@ -84,15 +87,16 @@
   .stepTitle {
     font-weight: 500;
     font-size: 26px;
-    line-height: 140%;
-    margin-bottom: 16px;
+    line-height: 150%;
+    height: 78px;
+    margin-bottom: 20px;
     color: #000;
   }
   
   .stepDescription {
     font-weight: 400;
     font-size: 16px;
-    line-height: 161%;
+    line-height: 160%;
     color: #353535;
 
   }
@@ -102,9 +106,9 @@
     justify-content: space-between;
     position: absolute;
     top: 110%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
+    left: 20px;
+    right: 20px;
+    /* transform: translateY(-50%); */
     pointer-events: none;
     z-index: 5;
   }
@@ -132,18 +136,22 @@
   .trackRecord {
     
     text-align: center;
-    margin-top: 90px;
+    margin-top: 110px;
   }
   
   .trackTitle {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 30px;
     line-height: 96%;
+    text-align: center;
     text-align: center;
     margin-bottom: 30px;
     color: white;
   }
-  
+  .trackTitle span{
+    font-weight: 600;
+  font-size: 36px;
+  }
   @media (max-width: 768px) {
     .whyChooseUs {
       padding: 60px 0;
