@@ -6,24 +6,14 @@ const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
+        {/* Brand Column */}
         <div className={styles.column}>
           <h2 className={styles.logoText}>Enzill</h2>
-          
-          <div className={styles.legalSection}>
-            <div className={styles.legalLinks}>
-              <Link href="/privacy-policy" className={styles.legalLink}>
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className={styles.legalLink}>
-                Terms of Use
-              </Link>
-            </div>
-            <div className={styles.copyright}>
-              &copy; {new Date().getFullYear()} Enzill. All rights reserved.
-            </div>
-          </div>
+          <p className={styles.tagline}>Let's create your SEO link-building strategy together!</p>
+          <p className={styles.email}>hello@enzill.com</p>
         </div>
 
+        {/* Services Column */}
         <div className={styles.column}>
           <h3 className={styles.columnTitle}>Services</h3>
           <ul className={styles.navList}>
@@ -55,7 +45,8 @@ const Footer: React.FC = () => {
           </ul>
         </div>
 
-        <div className={styles.column + styles.columnAbout}>
+        {/* Company Column */}
+        <div className={styles.column}>
           <h3 className={styles.columnTitle}>Company</h3>
           <ul className={styles.navList}>
             <li className={styles.navItem}>
@@ -70,19 +61,21 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </div>
-        <div className={styles.legalSectionMob}>
-            <div className={styles.legalLinks}>
-              <Link href="/privacy-policy" className={styles.legalLink}>
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className={styles.legalLink}>
-                Terms of Use
-              </Link>
-            </div>
-            <div className={styles.copyright}>
-              &copy; {new Date().getFullYear()} Enzill. All rights reserved.
-            </div>
+      </div>
+      
+      {/* Copyright Section */}
+      <div className={styles.copyrightContainer}>
+        <div className={styles.copyrightContent}>
+          <p className={styles.copyrightText}>&copy; 2025 Enzill. All rights reserved.</p>
+          <div className={styles.legalLinks}>
+            <Link href="/terms" className={styles.legalLink}>
+              Terms of Use
+            </Link>
+            <Link href="/privacy-policy" className={styles.legalLink}>
+              Privacy Policy
+            </Link>
           </div>
+        </div>
       </div>
     </footer>
   );

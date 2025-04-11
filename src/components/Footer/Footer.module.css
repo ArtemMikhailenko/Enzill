@@ -1,37 +1,42 @@
 .footer {
-  background-color: #474ed6;
+  background-color: #4747D6;
   color: white;
-  padding: 40px 0;
   width: 100%;
-  height: 100%;
 }
 
 .container {
-  width: 100%;
-  height: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 40px 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }
 
 .column {
-  margin-bottom: 40px;
+  /* flex: 1; */
+  max-width: 300px;
 }
 
 .logoText {
-  font-size: 32px;
-  font-weight: 600;
-  margin: 0 0 20px 0;
-  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+}
+
+.tagline {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.email {
+  font-size: 1rem;
 }
 
 .columnTitle {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 500;
   margin: 0 0 20px 0;
-  color: white;
 }
 
 .navList {
@@ -41,101 +46,71 @@
 }
 
 .navItem {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .navLink {
-  color: rgba(255, 255, 255, 0.9);
+  color: white;
   text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s ease;
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
 }
 
 .navLink:hover {
-  color: white;
+  opacity: 0.8;
 }
 
-.legalSection {
-  margin-top: 20px;
-  gap: 50px;
+.copyrightContainer {
+  padding: 20px 0;
+}
+
+.copyrightContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+}
+
+.copyrightText {
+  font-size: 0.875rem;
+  margin: 0;
 }
 
 .legalLinks {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
+  gap: 20px;
 }
 
 .legalLink {
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
   text-decoration: none;
-  font-size: 16px;
-  margin-bottom: 10px;
+  font-size: 0.875rem;
+  transition: opacity 0.3s ease;
 }
 
-.copyright {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 14px;
-}
-.legalSectionMob{display: none;}
-/* Десктопная версия */
-@media (min-width: 769px) {
-  .container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .column {
-    /* flex: 1; */
-    min-width: 200px;
-    margin-bottom: 0;
-  }
-
-  .logoText {
-    font-size: 32px;
-  }
-
-  .columnTitle {
-    font-size: 18px;
-  }
-
-  .navLink {
-    font-size: 16px;
-  }
-
-  .navItem {
-    margin-bottom: 15px;
-  }
-
-  .legalLink {
-    font-size: 16px;
-  }
+.legalLink:hover {
+  opacity: 0.8;
 }
 
-/* Мобильная версия */
+/* Responsive styles */
 @media (max-width: 768px) {
-  .legalSection {
-    display: none;
-
-  }
-  .legalSectionMob{
-    display: block;
-    padding-top: 30px;
-  }
-  .legalLinks {
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
+  .container {
+    flex-direction: column;
+    gap: 40px;
   }
   
-  .legalLink {
-    margin-bottom: 0;
+  .column {
+    max-width: 100%;
   }
-  
-  .copyright {
-    text-align: center;
+  .tagline{
+    max-width: 250px;
+  }
+  .copyrightContent {
+    flex-direction: column-reverse;
+    gap: 15px;
+    text-align: left;
+    align-items: flex-start;
   }
 }

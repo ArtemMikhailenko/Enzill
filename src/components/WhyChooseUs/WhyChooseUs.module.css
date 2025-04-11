@@ -64,7 +64,7 @@
   }
   
   .borderedCard {
-    border: 2px dashed #4758FF;
+     border: 5px solid rgba(255, 255, 255, 0.1);
   }
   
   .stepsIndicator {
@@ -162,7 +162,9 @@
     .title {
       font-size: 30px;
     }
-    
+    .stepCard{
+      max-width: 100%;
+    }
     .subtitle {
       font-size: 16px;
     }
@@ -186,12 +188,12 @@
       margin: 0;
     }
     .trackTitle{
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600;
       margin-bottom: 15px;
     }
     .highlight{
-      font-size: 20px;
+      font-size: 20px !important;
       font-weight: 800;
     }
     .stepCard {

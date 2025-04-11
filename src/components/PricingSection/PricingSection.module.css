@@ -8,6 +8,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  padding-bottom: 60px;
 }
 
 .header {
@@ -235,7 +236,7 @@ color: rgba(255, 255, 255, 0.5);
 
 @media (max-width: 768px) {
   .pricingSection {
-    padding: 60px 0;
+    padding: 0 0;
   }
   
   .title {

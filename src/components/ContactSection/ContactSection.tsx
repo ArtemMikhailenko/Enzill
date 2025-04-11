@@ -153,7 +153,7 @@ const ContactSection: React.FC = () => {
         
         <div className={styles.formContainer}>
           <div className={styles.formCard}>
-            <h3 className={styles.formTitle}>BOOK A CALL WITH US</h3>    
+            <h3 className={styles.formTitle}>Contact WITH US</h3>    
             <form onSubmit={handleSubmit} className={styles.form}>
               <div className={styles.formGroup}>
                 <input
