@@ -171,11 +171,56 @@
   
   @media (max-width: 768px) {
     .title {
-      font-size: 36px;
+      font-weight: 500;
+      font-size: 35px;
+      line-height: 120%;
+      letter-spacing: -0.03em;
+      text-transform: capitalize;
+      padding-top: 20px;
     }
-    
+    .description{
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160%;
+      color: rgba(0, 0, 0, 0.6);
+    }
     .heroSection {
       padding: 60px 0;
+    }
+    .imageWrapper{
+      max-height: 282px;
+      width: 100%;
+    }
+    .imageWrapper img{
+      max-height: 282px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .ctaButton {
+      width:50%;
+      /* max-width: 260px; */
+      height: 58px;
+      font-weight: 600;
+      font-size: 22px;
+      text-align: center;
+    }
+    .cta {
+      margin-bottom: 40px;
+    }
+    .ratingText {
+      font-weight: 400;
+font-size: 14px;
+color: #2e2e2e;
+    }
+    .features{
+      gap: 10px;
+    }
+    .featureItem p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 164%;
+      color: #000;
+     
     }
   }
   
@@ -193,65 +238,20 @@
       max-width: 100%;
       text-align: left;
     }
-    
-    .title {
-      font-weight: 500;
-      font-size: 30px;
-      line-height: 160%;
-      letter-spacing: -0.07em;
-      text-transform: capitalize;
-      margin-bottom: 16px;
-    }
     .stars{
       margin: 0 0;
       justify-content: flex-start;
     }
-    .description {
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 155%;
-      color: #000;
-      margin-bottom: 24px;
-    }
+
     
-    .cta {
-      margin-bottom: 20px;
-    }
-    
-    .ctaButton {
-      width: 100%;
-      /* max-width: 260px; */
-      height: 58px;
-      font-weight: 600;
-      font-size: 22px;
-      text-align: center;
-    }
+
     
     .ratingContainer {
       margin-bottom: 20px;
     }
     
-    .ratingText {
-      font-size: 12px;
-    }
-    .features{
-      display: none;
-    }
-    .featuresMob{
-      display: inline-block;
-      display: flex;
-      justify-content: space-between;
-      font-weight: 500;
-      width: 100%;
-    }
 
-    .featureItem p {
-      font-size: 10px;
-      line-height: 230%;
-      text-wrap: nowrap;
-      color: #2e2e2e;
-     
-    }
+
     
     
     .imageWrapper {

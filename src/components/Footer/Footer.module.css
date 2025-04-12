@@ -18,24 +18,30 @@
 }
 
 .logoText {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0 0 15px 0;
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
 }
 
 .tagline {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 20px;
+  max-width: 210px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom:30px;
 }
 
 .email {
-  font-size: 1rem;
+  font-weight: 600;
+font-size: 16px;
+line-height: 160%;
+color: #fff;
 }
 
 .columnTitle {
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 700;
   margin: 0 0 20px 0;
 }
 
@@ -47,12 +53,15 @@
 
 .navItem {
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .navLink {
   color: white;
+  font-weight: 400;
   text-decoration: none;
   font-size: 1rem;
+  cursor: pointer;
   transition: opacity 0.3s ease;
 }
 
@@ -74,7 +83,9 @@
 }
 
 .copyrightText {
-  font-size: 0.875rem;
+  font-weight: 400;
+  font-size: 14px;
+  color: #f8f8f8;
   margin: 0;
 }
 
@@ -84,9 +95,10 @@
 }
 
 .legalLink {
-  color: white;
-  text-decoration: none;
-  font-size: 0.875rem;
+  font-weight: 400;
+  font-size: 14px;
+  color: #f8f8f8;
+  cursor: pointer;
   transition: opacity 0.3s ease;
 }
 
@@ -105,12 +117,26 @@
     max-width: 100%;
   }
   .tagline{
-    max-width: 250px;
+    max-width: 210px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.8);
   }
   .copyrightContent {
     flex-direction: column-reverse;
     gap: 15px;
     text-align: left;
     align-items: flex-start;
+  }
+  .columnTitle{
+    font-size: 16px;
+  }
+  .navLink{
+    font-size: 14px;
+  }
+  .email{
+    font-weight: 600;
+    font-size: 16px;
   }
 }

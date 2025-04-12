@@ -236,9 +236,11 @@ color: rgba(255, 255, 255, 0.5);
 
 @media (max-width: 768px) {
   .pricingSection {
-    padding: 0 0;
+    padding-bottom: 60px;
   }
-  
+  .pricingPlan{
+    margin-bottom: 0;
+  }
   .title {
     font-size: 30px;
   }

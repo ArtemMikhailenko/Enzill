@@ -1,11 +1,11 @@
 .contactSection {
-    padding: 80px 0;
+    padding: 160px 0;
     width: 100%;
   }
   
   .container {
     width: 100%;
-    max-width: 1240px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     height: 100%;
@@ -222,28 +222,45 @@
   
   @media (max-width: 768px) {
     .contactSection {
-      padding: 60px 0;
+      padding: 120px 0;
     }
     
     .title {
+      font-weight: 600;
       font-size: 32px;
+      line-height: 130%;
+      letter-spacing: 0.01em;
     }
-    
+    .description{
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160%;
+      color: rgba(0, 0, 0, 0.6);
+    }
     .formCard {
       padding: 30px 20px;
     }
+    .benefitItem p{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 165%;
+      letter-spacing: -0.01em;
+      color: #353535;
+    }
+    .formTitle{
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .submitButton{
+      margin-top: 20px;
+      padding: 16px
+    }
+    .disclaimer{
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 160%;
+      color: rgba(255, 255, 255, 0.8);
+    }
   }
   
-  @media (max-width: 480px) {
-    .formInput, .formTextarea, .submitButton {
-      padding: 12px 14px;
-    }
-    
-    .title {
-      font-size: 28px;
-    }
-    
-    .benefitItem p {
-      font-size: 15px;
-    }
-  }

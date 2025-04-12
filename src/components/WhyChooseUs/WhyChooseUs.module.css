@@ -159,14 +159,24 @@
     .sliderContainer{
       padding: 0;
     }
+    .slideWrapper{
+      max-height: 210px;
+    }
     .title {
-      font-size: 30px;
+      font-weight: 600;
+      font-size: 32px;
+      text-align: center;
     }
     .stepCard{
+      min-height: 210px;
+      padding: 20px;
       max-width: 100%;
     }
     .subtitle {
-      font-size: 16px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160%;
+      text-align: center;
     }
     
     .trackTitle {
@@ -180,6 +190,24 @@
     .countryBadge {
       padding: 6px 12px;
       font-size: 12px;
+    }
+    .stepTitle{
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 150%;
+      height: auto;
+    }
+    .stepDescription{
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160%;
+      color: #353535;
+      height: auto;
+
+    }
+    .sliderControls{
+      left: 10px;
+      right: 10px;
     }
   }
   
@@ -195,15 +223,6 @@
     .highlight{
       font-size: 20px !important;
       font-weight: 800;
-    }
-    .stepCard {
-      padding: 24px;
-    }
-    
-    
-    .sliderButton {
-      width: 36px;
-      height: 36px;
     }
     
     .countriesContainer {
