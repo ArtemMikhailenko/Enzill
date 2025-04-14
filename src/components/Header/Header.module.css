@@ -216,23 +216,17 @@
   display: block;
   width: 34px;
   height: 2px;
-  background-color: #375fd1;
+  background-color: #1c274c;
   margin: 6px 0;
   transition: all 0.3s ease;
 }
 
 .headerScrolled .burgerLine {
-  width: 30px; /* Smaller lines when scrolled */
+  width: 18px; /* Smaller lines when scrolled */
   margin: 5px 0; /* Tighter spacing when scrolled */
 }
 
-.burgerLine:nth-child(2) {
-  width: 30px;
-}
 
-.headerScrolled .burgerLine:nth-child(2) {
-  width: 25px; /* Middle line even smaller when scrolled */
-}
 
 .burgerButton:hover .burgerLine {
   background-color: #000;
@@ -298,8 +292,9 @@
 .closeButton {
   background: none;
   border: none;
+  font-weight: 100;
   color: #fff;
-  font-size: 32px;
+  font-size: 52px;
   cursor: pointer;
   position: absolute;
   top: 20px;
@@ -321,14 +316,17 @@
 }
 
 .mobileNavLink {
-  font-size: 18px;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
   color: #fff;
+  width: 100%;
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px 0px;
 }
 
 .mobileNavLink:before {
@@ -354,13 +352,17 @@
 .mobileCtaButton {
   display: inline-flex;
   align-items: center;
-  margin-top: 24px;
+  margin-top: 50px;
+  text-align: center;
+  justify-content: center;
   padding: 12px 24px;
   background-color: #fff;
   color: #4758FF;
   border-radius: 5px;
+  gap: 20px;
   text-decoration: none;
   font-weight: 500;
+  width: 100%;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;

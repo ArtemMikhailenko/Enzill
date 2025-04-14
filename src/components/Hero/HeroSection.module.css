@@ -199,9 +199,9 @@
     .ctaButton {
       width:50%;
       /* max-width: 260px; */
-      height: 58px;
+      height: 50px;
       font-weight: 600;
-      font-size: 22px;
+      font-size: 14px;
       text-align: center;
     }
     .cta {
@@ -221,6 +221,10 @@ color: #2e2e2e;
       line-height: 164%;
       color: #000;
      
+    }
+    .stars{
+      margin: 0 0;
+      justify-content: flex-start;
     }
   }
   
